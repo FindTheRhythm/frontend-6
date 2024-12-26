@@ -1,7 +1,7 @@
 const config = {
     baseUrl: 'https://nomoreparties.co/v1/frontend-st-cohort-201',
     headers: {
-        authorization: '7fcf3de6-59c1-4ab7-906f-9dafefeb6e1a',
+        authorization: '432e9895-0d71-4423-9b26-6dcdb8c9af1b',
         'Content-Type': 'application/json'
     }
 }
@@ -11,7 +11,7 @@ export const getInitialCards = async () => {
         const response = await fetch(`${config.baseUrl}/cards`, {
             method: 'GET',
             headers: {
-                authorization: '7fcf3de6-59c1-4ab7-906f-9dafefeb6e1a',
+                authorization: '432e9895-0d71-4423-9b26-6dcdb8c9af1b',
                 'Content-Type': 'application/json'
             },
         });
@@ -33,7 +33,7 @@ export const postCard = async (card) => {
         const response = await fetch(`${config.baseUrl}/cards`, {
             method: 'POST',
             headers: {
-                authorization: '7fcf3de6-59c1-4ab7-906f-9dafefeb6e1a',
+                authorization: '432e9895-0d71-4423-9b26-6dcdb8c9af1b',
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(card)
@@ -56,7 +56,7 @@ export const editCardPost = async (profile) => {
         const response = await fetch(`${config.baseUrl}/cards`, {
             method: 'PATCH',
             headers: {
-                authorization: '7fcf3de6-59c1-4ab7-906f-9dafefeb6e1a',
+                authorization: '432e9895-0d71-4423-9b26-6dcdb8c9af1b',
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(profile)
@@ -83,7 +83,7 @@ export const deleteCardPost = async (cardElement) => {
         const response = await fetch(`${config.baseUrl}/cards/${cardId}`, {
             method: 'DELETE',
             headers: {
-                authorization: '7fcf3de6-59c1-4ab7-906f-9dafefeb6e1a',
+                authorization: '432e9895-0d71-4423-9b26-6dcdb8c9af1b',
                 'Content-Type': 'application/json',
             },
         });
@@ -105,7 +105,7 @@ export function likeCard(cardId) {
     return fetch(`${config.baseUrl}/cards/likes/${cardId}`, {
             method: 'PUT',
             headers: {
-                authorization: '7fcf3de6-59c1-4ab7-906f-9dafefeb6e1a',
+                authorization: '432e9895-0d71-4423-9b26-6dcdb8c9af1b',
                 'Content-Type': 'application/json'
             }
         })
@@ -128,7 +128,7 @@ export function unlikeCard(cardId) {
     return fetch(`${config.baseUrl}/cards/likes/${cardId}`, {
             method: 'DELETE',
             headers: {
-                authorization: '7fcf3de6-59c1-4ab7-906f-9dafefeb6e1a',
+                authorization: '432e9895-0d71-4423-9b26-6dcdb8c9af1b',
                 'Content-Type': 'application/json'
             }
         })
@@ -152,7 +152,7 @@ export const editPost = async (avatarUrl) => {
         const response = await fetch(`${config.baseUrl}/users/me/avatar`, {
             method: 'PATCH',
             headers: {
-                authorization: '7fcf3de6-59c1-4ab7-906f-9dafefeb6e1a',
+                authorization: '432e9895-0d71-4423-9b26-6dcdb8c9af1b',
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
@@ -174,7 +174,7 @@ export const editPost = async (avatarUrl) => {
 
 fetch('https://nomoreparties.co/v1/frontend-st-cohort-201/cards', {
         headers: {
-            authorization: '7fcf3de6-59c1-4ab7-906f-9dafefeb6e1a'
+            authorization: '432e9895-0d71-4423-9b26-6dcdb8c9af1b'
         }
     })
     .then(res => res.json())
